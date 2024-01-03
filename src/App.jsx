@@ -19,12 +19,12 @@ function App() {
         });
         if(drinkFound){
             const instructions=drinkFound.strInstructions;
-        const ingredients= [drinkFound.strIngredient1, drinkFound.strIngredient2,drinkFound.strIngredient3];
+        const ingredients= [drinkFound.strIngredient1, drinkFound.strIngredient2,drinkFound.strIngredient3 ,drinkFound.strIngredient4 , drinkFound.strIngredient5];
         setShowIngredients(ingredients);
         setShowInstructions(instructions);
-        alert("Instructions:"+showInstructions);
+        alert("Instructions:  "+showInstructions);
 
-        alert("Ingredients:"+showIngredients);
+        alert("Ingredients: " +showIngredients);
 
 
     }
@@ -80,7 +80,7 @@ function App() {
                   
                     {
                         drinksData.map((obj) => {
-                            const { idDrink, strDrink, strDrinkThumb, strGlass, strAlcoholic,strIngredient1, strIngredient2 ,strIngredient3, strInstructions
+                            const { idDrink, strDrink, strDrinkThumb, strGlass
                             } = obj
                             return <li key={idDrink}>
                                 <div className="container" onClick={()=>handleClick(idDrink)}>
